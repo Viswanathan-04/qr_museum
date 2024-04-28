@@ -1,0 +1,62 @@
+.App1
+{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.App1 .main
+{
+  background: linear-gradient(135deg, rgb(255, 158, 158),rgb(128, 128, 255));
+  margin: 0px auto;
+}
+.App1 nav
+{
+  display: flex;
+  flex-direction: column;
+}
+.App1 nav .icons 
+{
+  display: flex;
+  flex-direction: column;
+  margin: auto 0px;
+  gap: 15px;
+}
+.App1 nav .link1
+{
+  margin: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+}
+.App1 nav .link1:hover
+{
+  color: rgb(128, 128, 255);
+}
+.App1 nav .ver-bar
+{
+  margin: 20px auto;
+  background: linear-gradient(135deg, rgb(255, 158, 158),rgb(128, 128, 255));
+  height: 100%;
+  padding: 5px;
+}
+
+@media screen and (max-width : 756px) {
+  .App1 nav
+  {
+    flex-direction: row;
+  }
+  .App1 nav .icons
+  {
+    flex-direction: row;
+  }
+  .App1 nav .ver-bar
+  {
+    height: 0.8vh;
+    width: 100vw;
+  }
+  .App1
+  {
+    flex-direction: column;
+  }
+}

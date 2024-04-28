@@ -1,0 +1,59 @@
+.main2
+{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.main2 .title2
+{
+    font-family: "Papyrus";
+    color: black;
+    margin-bottom: 30px;
+}
+.main2 .image2
+{
+    width: 250px;
+}
+.main2 .desc2
+{
+    font-size: 16px;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    text-align: justify;
+    padding: 10px;
+    scrollbar-color: rgb(0, 100, 255) transparent;
+}
+.main2 .sel_lang
+{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 15px;
+}
+.main2 .sel_lang .trans2
+{
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    margin: auto;
+    border: 3px solid white;
+    transition: ease-in-out 0.3s;
+}
+.main2 .sel_lang .trans2:hover
+{
+    color: rgb(128, 128, 255);
+    background-color: white;
+    border: 3px solid transparent;
+}
+.main2 .sel_lang #selector
+{
+    width: 130px;
+    padding: 10px;
+    border-radius: 10px;
+}

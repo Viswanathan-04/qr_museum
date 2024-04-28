@@ -1,0 +1,34 @@
+.main1
+{
+    width: 350px;
+    min-height: 100vh;
+}
+.main1 *
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.main1 .title1
+{
+    font-family: 'Papyrus';
+    color: black;
+}
+.main1 .camera
+{
+    margin: 10px 0px;
+}
+.main1 .capture_btn
+{
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 50%;
+    border: 3px solid;
+    font-size: 30px;
+}
+.main1 .capture_btn:hover
+{
+    background-color: rgb(128, 128, 255);
+    color: white;
+}
