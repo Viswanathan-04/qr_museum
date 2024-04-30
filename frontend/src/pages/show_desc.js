@@ -2,6 +2,7 @@ import "./show_desc.css";
 import React, {useState} from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { FaMinusCircle, FaPlusCircle, FaVolumeUp } from "react-icons/fa"
 
 function Show_desc()
 {
@@ -35,6 +36,27 @@ function Show_desc()
         }
     });
 
+    const incFont = (() => {
+        const txt = document.getElementsByClassName('desc2')[0];
+        const style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+        const currentSize = parseFloat(style);
+        if (currentSize>=26.0)
+        {
+            return;
+        }
+        txt.style.fontSize = (currentSize + 2) + 'px';
+    })
+    const decFont = (() => {
+        const txt = document.getElementsByClassName('desc2')[0];
+        const style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+        const currentSize = parseFloat(style);
+        if (currentSize<=14.0)
+        {
+            return;
+        }
+        txt.style.fontSize = (currentSize - 2) + 'px';
+    })
+
     return (
         <div className="main2">
             <h2 className="title2">{data.title}</h2>
@@ -52,6 +74,10 @@ function Show_desc()
                     <option value="te">Telugu</option>
                 </select>
                 <button className="trans2" onClick={handleTrans}>{btnText}</button>
+                <div className="font-size-2">
+                    <button className="inc-font" onClick={incFont}><FaPlusCircle/></button>
+                    <button className="dec-font" onClick={decFont}><FaMinusCircle/></button>
+                </div>
             </div>
         </div>
     );

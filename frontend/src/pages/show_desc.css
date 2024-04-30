@@ -54,6 +54,22 @@
 .main2 .sel_lang #selector
 {
     width: 130px;
+    height: 50px;
+    margin: auto;
+    font-size: 16px;
     padding: 10px;
     border-radius: 10px;
+}
+.main2 .font-size-2
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.main2 .font-size-2 .inc-font,.dec-font
+{
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
 }
