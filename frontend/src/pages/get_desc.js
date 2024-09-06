@@ -23,6 +23,11 @@ function Get_desc() {
         })
         .then(response => {
             console.log(response.data);
+            if (response.data=="Error decoding")
+            {
+                alert(response.data);
+                return;
+            }
             navigate('/show', { state: { data: response.data } });
         })
         .catch(error => {alert('Please rescan your QR code'); console.log(error); window.location.reload();});
